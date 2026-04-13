@@ -1,15 +1,17 @@
 import React from 'react';
 import { Outlet } from 'react-router';
+import Navbar from '../Components/Shared/Navbar/Navbar';
+import Footer from '../Components/Shared/Footer/Footer';
 
 const RootLayout = () => {
     return (
         <div>
-            <h1>Navbar</h1>
+            <Navbar />
 
                <Outlet />
 
-            <h1>Footer</h1>
-            
+            <Footer></Footer>
+
         </div>
     );
 };
