@@ -77,12 +77,12 @@ const FriendDetails = () => {
       <button className="btn w-full">Archive</button>
 
       <button className="btn w-full text-red-500 border border-red-500 hover:bg-red-500 hover:text-white"> Delete </button>
-
-          <Link to='/'>
+           <Link to='/'>
                 <button className='mt-4 px-4 py-2  bg-green-800 text-white rounded-md hover:bg-green-700'>
                  <span className='flex items-center justify-center gap-4'><FaArrowLeft />Go Back to Home</span>
                 </button>
             </Link>
+        
 
     </div>
 
