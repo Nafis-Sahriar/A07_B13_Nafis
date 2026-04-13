@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import useFriends from '../../Hooks/useFriends';
 import { IoCall } from 'react-icons/io5';
 import { IoMdText, IoMdVideocam } from 'react-icons/io';
 import { ContextExporter } from '../../Contexts/ContextExporter';
 import { toast } from 'react-toastify';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const FriendDetails = () => {
 
@@ -77,6 +78,12 @@ const FriendDetails = () => {
 
       <button className="btn w-full text-red-500 border border-red-500 hover:bg-red-500 hover:text-white"> Delete </button>
 
+          <Link to='/'>
+                <button className='mt-4 px-4 py-2  bg-green-800 text-white rounded-md hover:bg-green-700'>
+                 <span className='flex items-center justify-center gap-4'><FaArrowLeft />Go Back to Home</span>
+                </button>
+            </Link>
+
     </div>
 
 
@@ -125,11 +132,14 @@ const FriendDetails = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
-        <button onClick={()=>handleInteraction('Call')} className="btn flex flex-row items-center gap-2 py-6 text-black"> <span><IoCall /> </span> Call </button>
+        <button onClick={()=>handleInteraction('Call')} className="btn flex flex-row items-center gap-2 py-6 hover:bg-[#09885e] hover:text-white text-black"> 
+                        
+                        <span><IoCall /> </span> Call 
+        </button>
 
-        <button onClick={()=>handleInteraction('Text')} className="btn flex flex-row items-center gap-2 py-6"> <span><IoMdText /> </span> Text </button>
+        <button onClick={()=>handleInteraction('Text')} className="btn flex flex-row items-center gap-2 py-6 hover:bg-[#3b82f6] hover:text-white text-black"> <span><IoMdText /> </span> Text </button>
 
-        <button onClick={()=>handleInteraction('Video')} className="btn flex flex-row items-center gap-2 py-6"><span><IoMdVideocam/> </span> Video </button>
+        <button onClick={()=>handleInteraction('Video')} className="btn flex flex-row items-center gap-2 py-6 hover:bg-[#f59e0b] hover:text-white text-black"><span><IoMdVideocam/> </span> Video </button>
 
                   </div>
 
@@ -145,16 +155,16 @@ const FriendDetails = () => {
 
                                 <div>
                                      {
-                                    interaction.type === "Call" && <span><IoCall /> </span>
+                                    interaction.type === "Call" && <span className="text-green-500"><IoCall /> </span>
                                    
                                 }
 
                                 {
-                                     interaction.type === "Text" && <span><IoMdText /> </span>
+                                     interaction.type === "Text" && <span className="text-blue-500"><IoMdText /> </span>
                                     
                                 }
                                 {
-                                    interaction.type === "Video" && <span><IoMdVideocam/></span>
+                                    interaction.type === "Video" && <span className="text-yellow-500"><IoMdVideocam/></span>
                                 }
                                 </div>
 

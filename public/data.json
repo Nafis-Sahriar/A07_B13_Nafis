@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Jhankar Mahbub",
-    "picture": "https://i.pravatar.cc/150?img=2",
+    "picture": "https://i.ibb.co.com/G4tNddrF/ta-W8-Os-Lp.jpg",
     "email": "alice@example.com",
     "days_since_contact": 5,
     "status": "on-track",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Jenseng Huang",
-    "picture": "https://i.pravatar.cc/150?img=3",
+    "picture": "https://i.ibb.co.com/XrB5ksrL/licensed-image.jpg",
     "email": "michael@example.com",
     "days_since_contact": 20,
     "status": "overdue",
@@ -38,11 +38,11 @@
   {
     "id": 4,
     "name": "Nafis Sahriar Redwan",
-    "picture": "https://i.pravatar.cc/150?img=4",
+    "picture": "https://i.ibb.co.com/xqmrcMkD/1772895809356.jpg",
     "email": "emma@example.com",
     "days_since_contact": 2,
     "status": "on-track",
-    "tags": ["family", "cousin", "support"],
+    "tags": ["stupid", "terrorist", "dumb"],
     "bio": "Cousin, very close since childhood.",
     "goal": 15,
     "next_due_date": "2025-08-01"
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "name": "Mr. Bean",
-    "picture": "https://i.pravatar.cc/150?img=5",
+    "picture": "https://i.ibb.co.com/8gbBmKL6/Atkinson-Rowan-crop.jpg",
     "email": "daniel@example.com",
     "days_since_contact": 9,
     "status": "on-track",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Adolf Hitler",
-    "picture": "https://i.pravatar.cc/150?img=6",
+    "picture": "https://i.ibb.co.com/zWh5pbZ4/19740.png",
     "email": "sophia@example.com",
     "days_since_contact": 16,
     "status": "overdue",
