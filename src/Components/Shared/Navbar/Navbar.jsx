@@ -57,10 +57,13 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-between">
 
           {/* Left: Logo */}
+
+          <NavLink to="/" >
           <div className="text-xl">
             <span className="font-bold text-black">Keen</span>
             <span className="text-[#244D3F] font-bold">Keeper</span>
           </div>
+          </NavLink>
 
           {/* Right: Nav Buttons */}
           <div className="flex gap-2">

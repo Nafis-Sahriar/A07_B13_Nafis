@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router';
 import useFriends from '../../Hooks/useFriends';
+import { IoCall } from 'react-icons/io5';
+import { IoMdText, IoMdVideocam } from 'react-icons/io';
+import { ContextExporter } from '../../Contexts/ContextExporter';
+import { toast } from 'react-toastify';
 
 const FriendDetails = () => {
 
@@ -11,6 +15,20 @@ const FriendDetails = () => {
     const Id = parseInt(friendId);
 
     const friend = friends.find(f => f.id === Id);
+
+    const {interactions,  setInteractions } = useContext(ContextExporter);
+
+    const handleInteraction = (type) => {
+        
+        const interaction = {
+            name: friend.name,
+            type,
+            date: new Date().toISOString()
+        };
+        setInteractions((prev) => [...prev, interaction]);
+
+        toast.success(` ${type}  with ${friend.name}`, {position: "top-center", autoClose: 3000,draggable: true,theme: "colored",});
+    }
 
     if(loading)
     {
@@ -106,14 +124,52 @@ const FriendDetails = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
-        <button className="btn flex flex-col items-center gap-2 py-6"> Call </button>
+        <button onClick={()=>handleInteraction('Call')} className="btn flex flex-row items-center gap-2 py-6 text-black"> <span><IoCall /> </span> Call </button>
 
-        <button className="btn flex flex-col items-center gap-2 py-6"> Text </button>
+        <button onClick={()=>handleInteraction('Text')} className="btn flex flex-row items-center gap-2 py-6"> <span><IoMdText /> </span> Text </button>
 
-        <button className="btn flex flex-col items-center gap-2 py-6"> Video </button>
+        <button onClick={()=>handleInteraction('Video')} className="btn flex flex-row items-center gap-2 py-6"><span><IoMdVideocam/> </span> Video </button>
 
                   </div>
 
+         </div>
+
+         <div>
+            {
+                interactions.map((interaction, index) => {
+                    if(interaction.name === friend.name)
+                    {
+                        return (
+                            <div key={index} className="bg-gray-100 p-4 rounded-xl flex items-center gap-4 mb-5">
+
+                                <div>
+                                     {
+                                    interaction.type === "Call" && <span><IoCall /> </span>
+                                   
+                                }
+
+                                {
+                                     interaction.type === "Text" && <span><IoMdText /> </span>
+                                    
+                                }
+                                {
+                                    interaction.type === "Video" && <span><IoMdVideocam/></span>
+                                }
+                                </div>
+
+                                <div>
+                                   <p>{interaction.type}</p>
+                                  <p>{interaction.date}</p> 
+                                </div>
+                               
+
+                                
+                            </div>
+                        );
+
+                    }
+                })
+            }
          </div>
 
        </div>

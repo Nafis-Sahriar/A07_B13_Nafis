@@ -1,6 +1,16 @@
 import React from 'react';
+import useFriends from '../../../Hooks/useFriends';
 
 const Banner = () => {
+
+
+     const {friends} = useFriends();
+
+     //count total friends on track
+        const onTrack = friends.filter(friend => friend.status == "on-track");
+        
+
+
     return (
         <div>
             <div className="bg-gray-100 py-12">
@@ -29,12 +39,12 @@ const Banner = () => {
 
        
           <div className="bg-white p-6 rounded shadow text-center">
-            <h2 className="text-2xl font-bold text-[#244D3F]">10</h2>
+            <h2 className="text-2xl font-bold text-[#244D3F]">{friends.length}</h2>
             <p className="text-gray-500 mt-2">Total Friends</p>
           </div>
 
           <div className="bg-white p-6 rounded shadow text-center">
-            <h2 className="text-2xl font-bold text-[#244D3F]">3</h2>
+            <h2 className="text-2xl font-bold text-[#244D3F]">{onTrack.length}</h2>
             <p className="text-gray-500 mt-2">On Track</p>
           </div>
 

@@ -32,7 +32,7 @@ const FriendsCard = ({ friend }) => {
       
        <div className="flex justify-center">
         <img
-          src={friend.avatar_url}
+          src={friend.picture}
           alt={friend.name}
           className="w-24 h-24 rounded-full object-cover border-4 border-[#244D3F]"
         />

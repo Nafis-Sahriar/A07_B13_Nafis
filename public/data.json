@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "John Doe",
-    "picture": "https://i.pravatar.cc/150?img=1",
+    "name": "Warren Buffett",
+    "picture": "https://i.ibb.co.com/JwC6tRm8/GA-Warren-Buffett-20210203-0001.jpg",
     "email": "john@example.com",
     "days_since_contact": 12,
     "status": "overdue",
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "name": "Alice Smith",
+    "name": "Jhankar Mahbub",
     "picture": "https://i.pravatar.cc/150?img=2",
     "email": "alice@example.com",
     "days_since_contact": 5,
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "name": "Michael Brown",
+    "name": "Jenseng Huang",
     "picture": "https://i.pravatar.cc/150?img=3",
     "email": "michael@example.com",
     "days_since_contact": 20,
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "name": "Emma Wilson",
+    "name": "Nafis Sahriar Redwan",
     "picture": "https://i.pravatar.cc/150?img=4",
     "email": "emma@example.com",
     "days_since_contact": 2,
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "name": "Daniel Taylor",
+    "name": "Mr. Bean",
     "picture": "https://i.pravatar.cc/150?img=5",
     "email": "daniel@example.com",
     "days_since_contact": 9,
@@ -61,19 +61,19 @@
   },
   {
     "id": 6,
-    "name": "Sophia Martinez",
+    "name": "Adolf Hitler",
     "picture": "https://i.pravatar.cc/150?img=6",
     "email": "sophia@example.com",
     "days_since_contact": 16,
     "status": "overdue",
-    "tags": ["travel", "adventure", "explore"],
+    "tags": ["best-buddy", "adventure", "explore"],
     "bio": "Travel companion for adventures.",
     "goal": 12,
     "next_due_date": "2025-07-19"
   },
   {
     "id": 7,
-    "name": "James Anderson",
+    "name": "James Bond",
     "picture": "https://i.pravatar.cc/150?img=7",
     "email": "james@example.com",
     "days_since_contact": 4,
