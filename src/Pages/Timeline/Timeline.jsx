@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { ContextExporter } from '../../Contexts/ContextExporter';
-import { IoCall } from 'react-icons/io5';
-import { IoMdText, IoMdVideocam } from 'react-icons/io';
 import TimelineCard from '../../Components/TImeLineCard/TimelineCard';
 
 const Timeline = () => {
@@ -45,7 +43,7 @@ const Timeline = () => {
                         <li onClick={()=>handleFilter('Text')}><a>Text</a></li>
                         <li onClick={()=>handleFilter('Video')}><a>Video</a></li>
                    </ul>
-</div>
+               </div>
 
 
 
@@ -58,23 +56,6 @@ const Timeline = () => {
 
                 {
                     filteredInteractions.map((interaction, index) => (<TimelineCard key={index} interaction={interaction} index={index} />))
-
-                        // <div>
-                        //     <div key={index} className='bg-white p-4 rounded shadow mb-4 flex items-center gap-4'>
-                        //     <div className='w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-xl font-bold'>
-                        //         {interaction.type === "Call" && <span className='text-green-500'><IoCall /> </span>}
-                        //         {interaction.type === "Text" && <span className='text-blue-500'><IoMdText /> </span>}
-                        //         {interaction.type === "Video" && <span className='text-yellow-500'><IoMdVideocam/></span>}
-                        //     </div>
-                        //     <div>
-                        //         <h3 className='font-semibold'>{interaction.name}</h3>
-                        //         <p className='text-gray-500'>{interaction.type} - {interaction.date}</p>
-                        //     </div>
-
-                        // </div>
-                       
-                        // </div>
-                    
 
                 }
 
