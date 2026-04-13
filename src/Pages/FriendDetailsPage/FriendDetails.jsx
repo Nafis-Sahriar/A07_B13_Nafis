@@ -146,7 +146,13 @@ const FriendDetails = () => {
          </div>
 
          <div>
+
+            <p className='text-xl font-bold text-green-800'>Recent Interactions</p>
             {
+
+
+
+
                 interactions.map((interaction, index) => {
                     if(interaction.name === friend.name)
                     {
@@ -179,6 +185,7 @@ const FriendDetails = () => {
                         );
 
                     }
+                 
                 })
             }
          </div>

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import useFriends from '../../../Hooks/useFriends';
+import { ContextExporter } from '../../../Contexts/ContextExporter';
 
 const Banner = () => {
 
@@ -8,6 +9,12 @@ const Banner = () => {
 
      //count total friends on track
         const onTrack = friends.filter(friend => friend.status == "on-track");
+
+     const almostDue = friends.filter(friend => friend.status == "Almost Due");
+
+     
+
+        const {interactions} = useContext(ContextExporter);
         
 
 
@@ -50,13 +57,13 @@ const Banner = () => {
 
           
           <div className="bg-white p-6 rounded shadow text-center">
-            <h2 className="text-2xl font-bold text-[#244D3F]">6</h2>
-            <p className="text-gray-500 mt-2">Need Attention</p>
+            <h2 className="text-2xl font-bold text-[#244D3F]">{almostDue.length}</h2>
+            <p className="text-gray-500 mt-2">Almost Due</p>
           </div>
 
         
           <div className="bg-white p-6 rounded shadow text-center">
-            <h2 className="text-2xl font-bold text-[#244D3F]">12</h2>
+            <h2 className="text-2xl font-bold text-[#244D3F]">{interactions.length}</h2>
             <p className="text-gray-500 mt-2">Interactions This Month</p>
           </div>
 
