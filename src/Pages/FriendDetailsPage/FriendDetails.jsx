@@ -23,7 +23,8 @@ const FriendDetails = () => {
         const interaction = {
             name: friend.name,
             type,
-            date: new Date().toISOString()
+            date: new Date().toISOString(),
+            picture: friend.picture
         };
         setInteractions((prev) => [...prev, interaction]);
 
