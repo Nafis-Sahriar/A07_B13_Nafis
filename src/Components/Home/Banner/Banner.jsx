@@ -8,7 +8,7 @@ const Banner = () => {
      const {friends} = useFriends();
 
      //count total friends on track
-        const onTrack = friends.filter(friend => friend.status == "on-track");
+     const onTrack = friends.filter(friend => friend.status == "on-track");
 
      const almostDue = friends.filter(friend => friend.status == "Almost Due");
 

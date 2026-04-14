@@ -3,26 +3,29 @@ import { CiHome } from "react-icons/ci";
 import { RiTimeLine } from "react-icons/ri";
 import { ImStatsDots } from "react-icons/im";
 import { NavLink } from "react-router";
+import navbarLogo from "/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm sticky z-10 top-0">
 
       <div className="w-[90%] mx-auto">
 
-        {/* MOBILE VIEW */}
+        
         <div className="flex flex-col items-center justify-center gap-3 md:hidden py-4">
 
           {/* Centered Title */}
           <div className="text-xl">
-            <span className="font-bold">Keen</span>
-            <span className="text-[#244D3F] font-bold">Keeper</span>
+            {/* <span className="font-bold">Keen</span>
+            <span className="text-[#244D3F] font-bold">Keeper</span> */}
+
+            <img src={navbarLogo} alt="Keen Keeper Logo" />
           </div>
 
-          {/* Buttons Below */}
+   
           <div className="flex flex-wrap justify-center gap-2">
 
-            {/* NavLink gives us isActive automatically */}
+           
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -53,19 +56,18 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* DESKTOP / TABLET VIEW */}
+   
         <div className="hidden md:flex items-center justify-between">
 
-          {/* Left: Logo */}
+       
 
           <NavLink to="/" >
           <div className="text-xl">
-            <span className="font-bold text-black">Keen</span>
-            <span className="text-[#244D3F] font-bold">Keeper</span>
+            <img src={navbarLogo} alt="Keen Keeper Logo" />
           </div>
           </NavLink>
 
-          {/* Right: Nav Buttons */}
+   
           <div className="flex gap-2">
 
             <NavLink
