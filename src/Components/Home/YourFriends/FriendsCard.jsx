@@ -7,17 +7,17 @@ const FriendsCard = ({ friend }) => {
   let statusText = "";
   if (friend.status === "overdue") 
   {
-    statusStyle = "bg-red-400 text-white";
+    statusStyle = "bg-red-400 text-white font-bold";
     statusText = "Overdue";
   } 
   else if (friend.status === "on-track") 
   {
-    statusStyle = "bg-green-300 text-black";
+    statusStyle = "bg-green-300 text-black font-bold";
     statusText = "On Track";
   } 
   else 
   {
-    statusStyle = "bg-yellow-400 text-white";
+    statusStyle = "bg-yellow-400 text-white font-bold";
     statusText = "Almost Due";
   }
 
@@ -48,7 +48,7 @@ const FriendsCard = ({ friend }) => {
       <div className="mt-3">
       {
         friend.tags.map((tag, index) => (
-          <span key={index} className="bg-green-200 text-green-900 px-4 py-1 rounded-full text-sm mr-2">{tag}</span>
+          <span key={index} className="bg-green-200 text-green-900 font-bold px-4 py-1 rounded-full text-sm mr-2">{tag}</span>
         ))
       }
       </div>

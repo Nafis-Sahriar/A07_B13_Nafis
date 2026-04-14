@@ -8,10 +8,7 @@ const Homepage = () => {
             <Banner></Banner>
 
             <YourFriends></YourFriends>
-
-
-
-
+            
         </div>
     );
 };

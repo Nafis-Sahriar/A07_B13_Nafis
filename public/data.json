@@ -66,7 +66,7 @@
     "email": "sophia@example.com",
     "days_since_contact": 16,
     "status": "overdue",
-    "tags": ["best-buddy", "adventure", "explore"],
+    "tags": [ "adventure", "explore"],
     "bio": "Travel companion for adventures.",
     "goal": 12,
     "next_due_date": "2025-07-19"
