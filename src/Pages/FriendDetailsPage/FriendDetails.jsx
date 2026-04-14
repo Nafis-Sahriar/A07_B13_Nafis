@@ -18,16 +18,16 @@ const FriendDetails = () => {
     const friend = friends.find(f => f.id === Id);
 
     const {interactions,  setInteractions } = useContext(ContextExporter);
-
-
     const sortedInteractions = [...interactions].sort((a, b) => new Date(b.date) - new Date(a.date));
 
     
     
 
-    const handleInteraction = (type) => {
+    const handleInteraction = (type) => 
+    {
         
-        const interaction = {
+        const interaction = 
+        {
             name: friend.name,
             type,
             date: new Date().toISOString(),
@@ -35,7 +35,7 @@ const FriendDetails = () => {
         };
         setInteractions((prev) => [...prev, interaction]);
 
-        toast.success(` ${type}  with ${friend.name}`, {position: "top-center", autoClose: 3000,draggable: true,theme: "colored",});
+        toast.success(` ${type}  with ${friend.name}`,{position:"top-center", autoClose:3000,draggable: true,theme:"colored",});
     }
 
     if(loading)

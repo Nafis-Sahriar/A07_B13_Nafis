@@ -4,7 +4,7 @@ import { IoCall } from "react-icons/io5";
 
 const TimelineCard = ({ interaction, index }) => {
   return (
-    <div key={index} className="bg-white p-4 rounded shadow mb-4 flex items-center justify-between gap-4">
+    <div key={index} className="bg-white p-4 rounded shadow mb-4 flex items-center justify-between hover:bg-green-100 gap-4 hover:bg-gray-50  transition duration-200">
 
       <div className="flex items-center gap-4">
         <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-xl font-bold">
