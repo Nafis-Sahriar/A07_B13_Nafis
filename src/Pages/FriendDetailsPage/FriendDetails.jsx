@@ -19,6 +19,12 @@ const FriendDetails = () => {
 
     const {interactions,  setInteractions } = useContext(ContextExporter);
 
+
+    const sortedInteractions = [...interactions].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    
+    
+
     const handleInteraction = (type) => {
         
         const interaction = {
@@ -147,13 +153,14 @@ const FriendDetails = () => {
 
          <div>
 
-            <p className='text-xl font-bold text-green-800'>Recent Interactions</p>
+            <p className='text-xl font-bold text-green-800'>Recent Interactions with  {friend.name}</p>
+
+         
+
             {
 
-
-
-
-                interactions.map((interaction, index) => {
+                sortedInteractions.map((interaction, index) =>
+                {
                     if(interaction.name === friend.name)
                     {
                         return (
