@@ -18,6 +18,7 @@ const FriendDetails = () => {
     const friend = friends.find(f => f.id === Id);
 
     const {interactions,  setInteractions } = useContext(ContextExporter);
+    
     const sortedInteractions = [...interactions].sort((a, b) => new Date(b.date) - new Date(a.date));
 
     

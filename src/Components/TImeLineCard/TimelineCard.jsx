@@ -15,9 +15,12 @@ const TimelineCard = ({ interaction, index }) => {
 
       <div className="flex items-center gap-4">
         <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-xl font-bold">
+
           {interaction.type === "Call" && (<span className="text-green-500"><IoCall /></span>)}
           {interaction.type === "Text" && (<span className="text-blue-500"><IoMdText /></span>)}
           {interaction.type === "Video" && (<span className="text-yellow-500"><IoMdVideocam /></span>)}
+
+          
         </div>
 
         <div>
