@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { ContextExporter } from '../../Contexts/ContextExporter';
 import { Legend, Pie, PieChart, Tooltip } from 'recharts';
+import { Link } from 'react-router';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const Stats = () => {
 
@@ -60,6 +62,16 @@ const Stats = () => {
       <Tooltip />
       <Legend />
     </PieChart>
+
+
+       <Link to='/'>
+                            <div className='flex items-center justify-center'>
+                                 <button className='mt-4 px-4 py-2  bg-green-800 text-white rounded-md hover:bg-green-700'>
+                                 <span className='flex items-center justify-center gap-4'><FaArrowLeft />Go Back to Home</span>
+                                </button>
+                            </div>
+                               
+                    </Link>
 
    
    
