@@ -28,6 +28,7 @@ const FriendDetails = () => {
         
         const interaction = 
         {
+            id: friend.id,
             name: friend.name,
             type,
             date: new Date().toISOString(),

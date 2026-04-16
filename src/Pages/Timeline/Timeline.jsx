@@ -7,6 +7,15 @@ const Timeline = () => {
 
     const { interactions } =useContext(ContextExporter);
 
+    const [search, setSearch] = useState("");
+
+    const handleSearch = (e) => 
+    {
+        const searchedVal = e.target.value.toLowerCase();
+        setSearch(searchedVal);
+    };
+
+
     const [filter, setFilter] = useState("All");
 
     let filteredInteractions = [];
@@ -20,13 +29,21 @@ const Timeline = () => {
     {
         filteredInteractions = interactions.filter(interaction => interaction.type === filter);
     }
+
+    filteredInteractions = filteredInteractions.filter(interaction =>
+    interaction.name.toLowerCase().includes(search));
     
-    const handleFilter = (type) => {
+    const handleFilter = (type) => 
+    {
         setFilter(type);
         document.activeElement.blur();
     };
 
     filteredInteractions = [...filteredInteractions].sort((a,b) =>new Date(b.date)-new Date(a.date));
+
+
+
+  
 
     return (
         <div className='w-[80%] mx-auto mt-20'>
@@ -43,6 +60,18 @@ const Timeline = () => {
                         <li onClick={()=>handleFilter('Text')}><a>Text</a></li>
                         <li onClick={()=>handleFilter('Video')}><a>Video</a></li>
                    </ul>
+               </div>
+
+               <div>
+
+                <form className="mb-5">
+                            <input  onChange={handleSearch} type="text" placeholder="Search by friend name..." className="input input-bordered w-full max-w-xs mb-5" />
+                </form>
+
+                      
+
+                      
+
                </div>
 
 

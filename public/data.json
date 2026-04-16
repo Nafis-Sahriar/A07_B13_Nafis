@@ -73,8 +73,8 @@
   },
   {
     "id": 7,
-    "name": "James Bond",
-    "picture": "https://i.pravatar.cc/150?img=7",
+    "name": "Joe Root",
+    "picture": "https://i.ibb.co.com/whC6G9cx/kane-afp-opic-d.webp",
     "email": "james@example.com",
     "days_since_contact": 4,
     "status": "on-track",
@@ -85,8 +85,8 @@
   },
   {
     "id": 8,
-    "name": "Olivia Thomas",
-    "picture": "https://i.pravatar.cc/150?img=8",
+    "name": "Sakib Al Hassan",
+    "picture": "https://i.ibb.co.com/27kkVTW9/1736411449719-Shakib-Al-Hasan.webp",
     "email": "olivia@example.com",
     "days_since_contact": 25,
     "status": "overdue",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "name": "William Jackson",
-    "picture": "https://i.pravatar.cc/150?img=9",
+    "picture": "https://i.ibb.co.com/Kvhpdmz/461f465b-f448-49b7-b377-0bea46f1522b.jpg",
     "email": "william@example.com",
     "days_since_contact": 7,
     "status": "Almost Due",
@@ -122,7 +122,7 @@
   {
     "id": 11,
     "name": "Ethan Harris",
-    "picture": "https://i.pravatar.cc/150?img=11",
+    "picture": "https://i.ibb.co.com/sdPBg7vL/Screenshot-2026-03-26-230729.png",
     "email": "ethan@example.com",
     "days_since_contact": 3,
     "status": "on-track",
@@ -134,7 +134,7 @@
   {
     "id": 12,
     "name": "Mia Clark",
-    "picture": "https://i.pravatar.cc/150?img=12",
+    "picture": "https://i.ibb.co.com/8Dv9DHKr/kohli231007.jpg",
     "email": "mia@example.com",
     "days_since_contact": 14,
     "status": "overdue",
