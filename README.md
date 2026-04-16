@@ -27,6 +27,8 @@ KeenKeeper helps you manage your friendships in an organized way. You can see al
   - Shows all interaction history
   - Sorted by most recent first
   - Filter by Call, Text, or Video
+  - You can Also Search for a specific friend in the timeline to see all interactions with that friend in timeline page.
+  - After searching you can also apply filters to see specific types of interactions with that friend in the timeline page.
 
 - Individual friend details page:
   - Shows interaction history for that specific friend
